@@ -67,7 +67,40 @@ try
       }
 ```
 * 序列化主要用处是将对象状态保存在文件中，多用于多线程。
-   
+
+## 第三天:cloud:
+### 多线程
+* 要想使用多线程，首先需要构建Thread对象
+* 两种方法： 1️⃣直接继承Thread类重写run()方法用自己构造方法构造 2️⃣继承Runnable接口实现run()方法后用Thread构造方法构造  
+
+1️⃣
+```Java
+class ThreadDemo extends Thread { 
+	...
+	public void run(){ ... }
+	...
+	}  //构造类
+	
+	ThreadDemo demo = new ThreadDemo();
+	demo.start()
+	...  //用该类对象就可以调用线程方法
+```
+2️⃣
+```Java
+	class ThreadDemo implements Runnable { 
+	...
+	public void run(){ ... }
+	...
+	}  //构造类
+	
+	ThreadDemo demo = new ThreadDemo();
+	Thread thread = new Thread(demo)
+	thread.start() //用该类再构造一个Thread对象才能调用线程方法
+```
+	
+	
+	
+
    
    
    
