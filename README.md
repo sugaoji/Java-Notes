@@ -97,7 +97,11 @@ class ThreadDemo extends Thread {
 	Thread thread = new Thread(demo)
 	thread.start() //用该类再构造一个Thread对象才能调用线程方法
 ```
-*[例子：使用线程和socket套接字实现客户端 服务器端双向通信](./CodeFile/ClientAndServer/)
+*[例子：使用线程和socket套接字实现客户端 服务器端双向通信](./CodeFile/ClientAndServer/)  
+* JVM是一个进程，而main函数是该进程创建的一个线程，我们可以在main中自己创建线程  
+* run()方法执行完毕后线程就结束了
+* 
+
 	
 	
 	
